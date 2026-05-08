@@ -1,1023 +1,827 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Lunar Path | LinkIT360</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --space-black: #04070f;
-      --space-deep: #080e1f;
-      --space-mid: #0d1a35;
-      --blue-glow: #3b82f6;
-      --blue-light: #93c5fd;
-      --purple-gem: #9b59f7;
-      --purple-light: #c4b5fd;
-      --cyan-trail: #67e8f9;
-      --white: #f0f6ff;
-      --muted: #8898b8;
-      --border: rgba(59, 130, 246, 0.18);
-      --card-bg: rgba(13, 26, 53, 0.7);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Lunar Path</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --cosmic-purple: #6B46C1;
+            --cosmic-blue: #4F46E5;
+            --cosmic-pink: #EC4899;
+            --cosmic-dark: #1E1B4B;
+            --cosmic-light: #F0E7FF;
+            --star-gold: #FCD34D;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --bg-light: #FAF9FF;
+        }
 
-    html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1E1B4B 0%, #312E81 25%, #4C1D95 50%, #581C87 75%, #6B21A8 100%);
+            color: #F9FAFB;
+            line-height: 1.7;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background-color: var(--space-black);
-      color: var(--white);
-      min-height: 100vh;
-      line-height: 1.75;
-      font-size: 15px;
-      overflow-x: hidden;
-    }
+        /* Animated stars background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent);
+            background-size: 200px 200px;
+            background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 150px 50px;
+            animation: twinkle 10s ease-in-out infinite;
+            opacity: 0.6;
+            z-index: 0;
+            pointer-events: none;
+        }
 
-    /* ── Stars background ── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,130,246,0.13) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 80% 20%, rgba(155,89,247,0.09) 0%, transparent 60%),
-        radial-gradient(ellipse 30% 50% at 10% 70%, rgba(103,232,249,0.07) 0%, transparent 60%);
-      pointer-events: none;
-      z-index: 0;
-    }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 0.3; }
+        }
 
-    .stars {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      background-image:
-        radial-gradient(1px 1px at 15% 12%, rgba(255,255,255,0.7) 0%, transparent 100%),
-        radial-gradient(1px 1px at 42% 7%, rgba(255,255,255,0.5) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 73% 19%, rgba(255,255,255,0.8) 0%, transparent 100%),
-        radial-gradient(1px 1px at 89% 5%, rgba(255,255,255,0.4) 0%, transparent 100%),
-        radial-gradient(1px 1px at 5% 35%, rgba(255,255,255,0.6) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 30% 48%, rgba(255,255,255,0.5) 0%, transparent 100%),
-        radial-gradient(1px 1px at 58% 61%, rgba(255,255,255,0.7) 0%, transparent 100%),
-        radial-gradient(1px 1px at 91% 42%, rgba(255,255,255,0.4) 0%, transparent 100%),
-        radial-gradient(1px 1px at 20% 75%, rgba(255,255,255,0.6) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 66% 88%, rgba(255,255,255,0.5) 0%, transparent 100%),
-        radial-gradient(1px 1px at 82% 77%, rgba(255,255,255,0.7) 0%, transparent 100%),
-        radial-gradient(1px 1px at 47% 93%, rgba(255,255,255,0.4) 0%, transparent 100%),
-        radial-gradient(2px 2px at 8% 90%, rgba(147,197,253,0.5) 0%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 95% 65%, rgba(196,181,253,0.6) 0%, transparent 100%),
-        radial-gradient(2px 2px at 36% 28%, rgba(103,232,249,0.4) 0%, transparent 100%);
-    }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    /* ── Layout ── */
-    .wrapper {
-      position: relative;
-      z-index: 1;
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 0 24px 80px;
-    }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    /* ── Header ── */
-    header {
-      text-align: center;
-      padding: 60px 0 48px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 52px;
-    }
+        @keyframes glow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(236, 72, 153, 0.5),
+                            0 0 40px rgba(79, 70, 229, 0.3); 
+            }
+            50% { 
+                box-shadow: 0 0 30px rgba(236, 72, 153, 0.7),
+                            0 0 60px rgba(79, 70, 229, 0.5); 
+            }
+        }
 
-    .game-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(59,130,246,0.12);
-      border: 1px solid rgba(59,130,246,0.3);
-      border-radius: 100px;
-      padding: 6px 18px;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--blue-light);
-      margin-bottom: 28px;
-    }
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    .game-badge::before {
-      content: '';
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--cyan-trail);
-      box-shadow: 0 0 8px var(--cyan-trail);
-      animation: pulse 2s ease-in-out infinite;
-    }
+        /* Header */
+        header {
+            padding: 60px 20px 50px;
+            text-align: center;
+            animation: slideDown 0.8s ease-out;
+        }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
-    }
+        .game-title {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 2px solid rgba(236, 72, 153, 0.3);
+            animation: glow 3s ease-in-out infinite;
+        }
 
-    h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: clamp(2rem, 6vw, 3.4rem);
-      font-weight: 800;
-      letter-spacing: -0.01em;
-      line-height: 1.1;
-      background: linear-gradient(135deg, var(--white) 0%, var(--blue-light) 50%, var(--purple-light) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 12px;
-    }
+        .rocket-icon {
+            font-size: 48px;
+            filter: drop-shadow(0 4px 12px rgba(236, 72, 153, 0.5));
+        }
 
-    .subtitle {
-      font-size: 13px;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-    }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 52px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 50%, #6366F1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
-    .subtitle span {
-      color: var(--purple-light);
-      font-weight: 500;
-    }
+        .subtitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 15px;
+            font-weight: 300;
+        }
 
-    /* ── Meta strip ── */
-    .meta-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px 24px;
-      margin-bottom: 48px;
-      backdrop-filter: blur(12px);
-    }
+        .date-badge {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 24px;
+            background: rgba(252, 211, 77, 0.15);
+            border: 1px solid rgba(252, 211, 77, 0.3);
+            border-radius: 50px;
+            font-size: 13px;
+            color: var(--star-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-    .meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      flex: 1;
-      min-width: 140px;
-    }
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 50px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.8s ease-out;
+        }
 
-    .meta-label {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-    }
+        .nav-title {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
 
-    .meta-value {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--blue-light);
-    }
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+        }
 
-    /* ── Sections ── */
-    section {
-      margin-bottom: 44px;
-    }
+        .nav-item {
+            padding: 14px 18px;
+            background: rgba(139, 92, 246, 0.15);
+            border: 1.5px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+        }
 
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
+        .nav-item:hover {
+            background: rgba(236, 72, 153, 0.25);
+            border-color: rgba(236, 72, 153, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(236, 72, 153, 0.3);
+        }
 
-    .section-num {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      color: var(--purple-gem);
-      letter-spacing: 0.1em;
-      min-width: 28px;
-    }
+        /* Main Content */
+        main {
+            animation: slideUp 1s ease-out;
+        }
 
-    h2 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      font-weight: 600;
-      color: var(--white);
-      letter-spacing: 0.02em;
-    }
+        .content-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            margin-bottom: 80px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-dark);
+        }
 
-    .section-line {
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(to right, var(--border), transparent);
-    }
+        /* Section Styling */
+        .section {
+            margin-bottom: 50px;
+            scroll-margin-top: 100px;
+        }
 
-    .content-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 24px 28px;
-      backdrop-filter: blur(8px);
-    }
+        .section:last-child {
+            margin-bottom: 0;
+        }
 
-    p {
-      color: rgba(240,246,255,0.82);
-      margin-bottom: 14px;
-      font-weight: 300;
-    }
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--cosmic-dark);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--cosmic-purple);
+            display: inline-block;
+            letter-spacing: 1px;
+        }
 
-    p:last-child { margin-bottom: 0; }
+        h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--cosmic-dark);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 4px solid var(--cosmic-pink);
+        }
 
-    strong {
-      color: var(--white);
-      font-weight: 500;
-    }
+        p {
+            margin: 16px 0;
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.8;
+        }
 
-    /* ── Highlight boxes ── */
-    .highlight {
-      border-radius: 10px;
-      padding: 16px 20px;
-      margin: 16px 0;
-      font-size: 14px;
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
 
-    .highlight.blue {
-      background: rgba(59,130,246,0.1);
-      border: 1px solid rgba(59,130,246,0.25);
-      color: var(--blue-light);
-    }
+        li {
+            margin: 12px 0;
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.7;
+        }
 
-    .highlight.purple {
-      background: rgba(155,89,247,0.1);
-      border: 1px solid rgba(155,89,247,0.25);
-      color: var(--purple-light);
-    }
+        li::marker {
+            color: var(--cosmic-pink);
+            font-weight: 600;
+        }
 
-    .highlight.green {
-      background: rgba(52,211,153,0.08);
-      border: 1px solid rgba(52,211,153,0.2);
-      color: #6ee7b7;
-    }
+        /* Highlight Boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(236, 72, 153, 0.05) 100%);
+            border-left: 4px solid var(--cosmic-purple);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            transition: all 0.3s ease;
+        }
 
-    .highlight.amber {
-      background: rgba(251,191,36,0.08);
-      border: 1px solid rgba(251,191,36,0.2);
-      color: #fcd34d;
-    }
+        .highlight-box:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15);
+        }
 
-    .highlight-icon {
-      font-size: 18px;
-      margin-top: 1px;
-      flex-shrink: 0;
-    }
+        .highlight-box.important {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.12) 0%, rgba(139, 92, 246, 0.06) 100%);
+            border-left-color: var(--cosmic-pink);
+        }
 
-    /* ── Lists ── */
-    ul, ol {
-      padding-left: 0;
-      list-style: none;
-      margin-bottom: 14px;
-    }
+        .highlight-box strong {
+            color: var(--cosmic-dark);
+            font-weight: 700;
+        }
 
-    ul li, ol li {
-      position: relative;
-      padding-left: 22px;
-      color: rgba(240,246,255,0.82);
-      font-weight: 300;
-      margin-bottom: 8px;
-      font-size: 14.5px;
-    }
+        /* Contact Card */
+        .contact-card {
+            background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 50%, #6366F1 100%);
+            border-radius: 16px;
+            padding: 35px;
+            margin: 40px 0;
+            box-shadow: 0 20px 50px rgba(139, 92, 246, 0.4);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
 
-    ul li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: var(--purple-gem);
-      font-size: 12px;
-      top: 3px;
-    }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(139, 92, 246, 0.5);
+        }
 
-    ol { counter-reset: item; }
-    ol li { counter-increment: item; }
-    ol li::before {
-      content: counter(item) '.';
-      position: absolute;
-      left: 0;
-      color: var(--blue-light);
-      font-size: 12px;
-      font-weight: 600;
-      top: 2px;
-    }
+        .contact-card h3 {
+            border: none;
+            padding: 0;
+            margin-top: 0;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: white;
+        }
 
-    /* ── Table ── */
-    .rights-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13.5px;
-      margin-top: 8px;
-    }
+        .contact-item {
+            margin: 14px 0;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-    .rights-table th {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 10px;
-      letter-spacing: 0.08em;
-      font-weight: 600;
-      color: var(--blue-light);
-      text-transform: uppercase;
-      padding: 10px 14px;
-      text-align: left;
-      border-bottom: 1px solid rgba(59,130,246,0.3);
-    }
+        .contact-item::before {
+            content: '🚀';
+            font-size: 20px;
+        }
 
-    .rights-table td {
-      padding: 11px 14px;
-      color: rgba(240,246,255,0.82);
-      font-weight: 300;
-      border-bottom: 1px solid rgba(59,130,246,0.08);
-      vertical-align: top;
-    }
+        /* Links */
+        a {
+            color: var(--cosmic-purple);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-    .rights-table tr:last-child td { border-bottom: none; }
-    .rights-table tr:hover td { background: rgba(59,130,246,0.04); }
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--cosmic-purple);
+            transition: width 0.3s ease;
+        }
 
-    .badge-tag {
-      display: inline-block;
-      background: rgba(155,89,247,0.18);
-      border: 1px solid rgba(155,89,247,0.3);
-      color: var(--purple-light);
-      border-radius: 6px;
-      padding: 2px 8px;
-      font-size: 11px;
-      font-weight: 500;
-    }
+        a:hover::after {
+            width: 100%;
+        }
 
-    .badge-tag.green {
-      background: rgba(52,211,153,0.1);
-      border-color: rgba(52,211,153,0.25);
-      color: #6ee7b7;
-    }
+        .contact-card a {
+            color: white;
+        }
 
-    /* ── Contact card ── */
-    .contact-card {
-      background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(155,89,247,0.1));
-      border: 1px solid rgba(59,130,246,0.3);
-      border-radius: 14px;
-      padding: 28px 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+        .contact-card a::after {
+            background: white;
+        }
 
-    .contact-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 14px;
-    }
+        /* Code/Reference styling */
+        code {
+            background: rgba(139, 92, 246, 0.1);
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            color: var(--cosmic-purple);
+            font-weight: 600;
+        }
 
-    .contact-label {
-      color: var(--muted);
-      min-width: 90px;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(12px);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 50px 20px;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-    .contact-value {
-      color: var(--white);
-      font-weight: 500;
-    }
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-    .contact-value a {
-      color: var(--cyan-trail);
-      text-decoration: none;
-    }
+        .footer-rocket {
+            font-size: 40px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 4px 12px rgba(236, 72, 153, 0.5));
+        }
 
-    .contact-value a:hover {
-      text-decoration: underline;
-    }
+        .footer-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.15);
+            margin: 20px 0;
+        }
 
-    /* ── Footer ── */
-    footer {
-      margin-top: 64px;
-      padding-top: 32px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 100;
+            font-size: 24px;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
 
-    .footer-brand {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-    }
+        .scroll-indicator.visible {
+            opacity: 1;
+            visibility: visible;
+        }
 
-    .footer-brand span {
-      color: var(--blue-light);
-    }
+        .scroll-indicator:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(236, 72, 153, 0.6);
+        }
 
-    .footer-note {
-      font-size: 12px;
-      color: var(--muted);
-    }
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
 
-    /* ── TOC ── */
-    .toc {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 22px 26px;
-      margin-bottom: 48px;
-      backdrop-filter: blur(8px);
-    }
+            h2 {
+                font-size: 24px;
+            }
 
-    .toc-title {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
+            h3 {
+                font-size: 18px;
+            }
 
-    .toc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 8px;
-    }
+            .content-wrapper {
+                padding: 30px 20px;
+                border-radius: 16px;
+            }
 
-    .toc-item {
-      font-size: 13px;
-      color: var(--blue-light);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 5px 0;
-      font-weight: 400;
-      transition: color 0.2s;
-    }
+            .rocket-icon {
+                font-size: 36px;
+            }
 
-    .toc-item:hover { color: var(--white); }
+            .nav-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-    .toc-item::before {
-      content: '';
-      width: 4px; height: 4px;
-      border-radius: 50%;
-      background: var(--purple-gem);
-      flex-shrink: 0;
-    }
+            header {
+                padding: 40px 20px 30px;
+            }
+        }
 
-    @media (max-width: 600px) {
-      .wrapper { padding: 0 16px 60px; }
-      .contact-card { padding: 20px; }
-      .content-card { padding: 18px 20px; }
-      .meta-strip { padding: 16px; }
-      header { padding: 40px 0 36px; }
-    }
-  </style>
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .game-title {
+                padding: 15px 25px;
+            }
+
+            .content-wrapper {
+                padding: 20px 15px;
+            }
+
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+
+            ul, ol {
+                padding-left: 20px;
+            }
+
+            .scroll-indicator {
+                width: 48px;
+                height: 48px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 20px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body::before {
+                display: none;
+            }
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .nav-item, .scroll-indicator {
+                display: none;
+            }
+
+            .content-wrapper {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="stars"></div>
-
-<div class="wrapper">
-
-  <!-- ── HEADER ── -->
-  <header>
-    <div class="game-badge">Privacy Policy · Lunar Path</div>
-    <h1>Privacy Policy</h1>
-    <p class="subtitle">
-      Published by <span>LinkIT360</span> &nbsp;·&nbsp; Game: <span>Lunar Path</span>
-    </p>
-  </header>
-
-  <!-- ── META STRIP ── -->
-  <div class="meta-strip">
-    <div class="meta-item">
-      <span class="meta-label">Effective Date</span>
-      <span class="meta-value">[INSERT DATE]</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">Last Updated</span>
-      <span class="meta-value">[INSERT DATE]</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">Version</span>
-      <span class="meta-value">1.0</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">Coverage</span>
-      <span class="meta-value">Global</span>
-    </div>
-    <div class="meta-item">
-      <span class="meta-label">Developer Contact</span>
-      <span class="meta-value">jawarajoystudio@gmail.com</span>
-    </div>
-  </div>
-
-  <!-- ── TOC ── -->
-  <div class="toc">
-    <div class="toc-title">Table of Contents</div>
-    <div class="toc-grid">
-      <a href="#overview" class="toc-item">Overview</a>
-      <a href="#information" class="toc-item">Information We Collect</a>
-      <a href="#advertising" class="toc-item">Advertising</a>
-      <a href="#children" class="toc-item">Children's Privacy</a>
-      <a href="#families" class="toc-item">Play Families Policy</a>
-      <a href="#tracking" class="toc-item">Tracking Technologies</a>
-      <a href="#third-party" class="toc-item">Third-Party Services</a>
-      <a href="#gdpr" class="toc-item">GDPR &amp; User Rights</a>
-      <a href="#dpo" class="toc-item">Data Protection Officer</a>
-      <a href="#international" class="toc-item">International Transfers</a>
-      <a href="#security" class="toc-item">Security</a>
-      <a href="#changes" class="toc-item">Policy Changes</a>
-      <a href="#contact" class="toc-item">Contact Us</a>
-    </div>
-  </div>
-
-  <!-- ── SECTION 1: OVERVIEW ── -->
-  <section id="overview">
-    <div class="section-header">
-      <span class="section-num">01</span>
-      <h2>Overview</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="content-card">
-      <p>
-        This Privacy Policy describes how <strong>LinkIT360</strong> ("we," "us," or "our"), a company based in Indonesia, operates the mobile game <strong>Lunar Path</strong> (the "Game") available on the Google Play Store.
-      </p>
-      <p>
-        This Policy explains what information is (and is not) collected when you play Lunar Path, how any data is handled, and the rights you have as a user — regardless of where you are located in the world.
-      </p>
-      <div class="highlight green">
-        <span class="highlight-icon">✅</span>
-        <span><strong>Privacy-first design:</strong> Lunar Path does not collect, store, or process any personal information from its players. Our game is built on a privacy-by-design principle — you play, and your data stays yours.</span>
-      </div>
-      <p>
-        By downloading and playing Lunar Path, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with any part of this Policy, please discontinue use of the Game.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── SECTION 2: INFORMATION WE COLLECT ── -->
-  <section id="information">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <h2>Information We Collect</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="content-card">
-      <div class="highlight green">
-        <span class="highlight-icon">🔒</span>
-        <span><strong>We do not collect any personal data.</strong> LinkIT360 does not require you to create an account, log in, or provide any personal information to play Lunar Path.</span>
-      </div>
-      <p>
-        We do not collect, request, receive, store, or process the following from users:
-      </p>
-      <ul>
-        <li>Name, email address, or other contact information</li>
-        <li>Device identifiers (IDFA, GAID, IMEI, or similar)</li>
-        <li>Location data (GPS or approximate)</li>
-        <li>Usage or behavioral analytics</li>
-        <li>Gameplay statistics sent to our servers</li>
-        <li>Crash reports or diagnostics sent to us</li>
-        <li>Financial information or payment data</li>
-        <li>Social media profiles or linked accounts</li>
-        <li>Photos, microphone, or camera data</li>
-        <li>Contacts or address book data</li>
-      </ul>
-      <p>
-        All game progress, scores, and settings are stored <strong>locally on your device</strong> and are not transmitted to us.
-      </p>
-      <div class="highlight blue">
-        <span class="highlight-icon">ℹ️</span>
-        <span><strong>Note on Advertising:</strong> While we do not collect data ourselves, the third-party advertising SDK integrated in this Game may collect certain technical information to serve ads. Please refer to Section 3 (Advertising) for full details.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SECTION 3: ADVERTISING ── -->
-  <section id="advertising">
-    <div class="section-header">
-      <span class="section-num">03</span>
-      <h2>Advertising</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="content-card">
-      <p>
-        Lunar Path is a <strong>free-to-play</strong> game supported by advertising. We display ads within the Game through a third-party advertising network: <strong>[AD NETWORK — e.g., Google AdMob]</strong>.
-      </p>
-
-      <div class="highlight amber">
-        <span class="highlight-icon">⚠️</span>
-        <span><strong>Child-directed ads only:</strong> Because Lunar Path is accessible to users under 13 years of age, we have configured our ad SDK to operate in <strong>child-directed mode</strong> and/or <strong>non-personalized ad mode</strong>. No behavioral profiling, interest-based targeting, or personalized advertising is applied to any user in this Game.</span>
-      </div>
-
-      <p>
-        Ads shown in this Game are <strong>contextual</strong> in nature — they are served based on the context of the game, not based on your personal data or browsing behavior.
-      </p>
-
-      <p><strong>What the Ad Network May Collect:</strong></p>
-      <p>
-        The advertising SDK may collect and process limited technical information on its own, subject to its own privacy policy. This may include:
-      </p>
-      <ul>
-        <li>IP address (for regional ad selection)</li>
-        <li>General device type and operating system version</li>
-        <li>Ad interaction events (ad impressions and clicks)</li>
-      </ul>
-
-      <p>
-        We have taken reasonable steps to ensure the ad network is instructed to treat all users in this Game as child audiences and to disable personalized targeting features. For more information, please review the privacy policy of our ad network partner:
-      </p>
-      <ul>
-        <li><strong>[AD NETWORK]</strong>: <em>[Insert ad network privacy policy URL]</em></li>
-      </ul>
-
-      <p>
-        <strong>No in-app purchases:</strong> Lunar Path contains <strong>no in-app purchases, subscriptions, or any payment mechanism</strong>. The Game is entirely free with no premium content behind a paywall.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── SECTION 4: CHILDREN'S PRIVACY ── -->
-  <section id="children">
-    <div class="section-header">
-      <span class="section-num">04</span>
-      <h2>Children's Privacy</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="content-card">
-      <p>
-        Lunar Path is designed to be accessible to users of all ages, <strong>including children under the age of 13</strong>. We take children's online privacy extremely seriously and comply with all applicable laws and platform policies in this regard.
-      </p>
-
-      <div class="highlight green">
-        <span class="highlight-icon">👦</span>
-        <span><strong>COPPA Compliance (USA):</strong> In compliance with the Children's Online Privacy Protection Act (COPPA), we do not knowingly collect any personal information from children under 13. The Game requires no registration, account creation, or submission of personal information.</span>
-      </div>
-
-      <div class="highlight purple">
-        <span class="highlight-icon">🇪🇺</span>
-        <span><strong>GDPR-K Compliance (EU):</strong> In compliance with the General Data Protection Regulation as applied to children (GDPR-K), and in accordance with national age thresholds across EU member states, Lunar Path does not process personal data of children. No parental consent mechanisms are required as we do not collect any data.</span>
-      </div>
-
-      <p>
-        Our commitments regarding children include:
-      </p>
-      <ul>
-        <li>No collection of personal information from any user, including children</li>
-        <li>No in-app purchases or monetization features that could be harmful to children</li>
-        <li>No social features, chat, or user-generated content</li>
-        <li>No links to external websites within gameplay that are not child-appropriate</li>
-        <li>Advertising configured for child-directed, non-personalized delivery only</li>
-        <li>No behavioral tracking or profiling of any user</li>
-      </ul>
-
-      <p>
-        If you are a parent or legal guardian and believe your child has been exposed to inappropriate content or you have concerns about this Game, please contact us immediately at <strong>jawarajoystudio@gmail.com</strong>.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── SECTION 5: PLAY FAMILIES POLICY ── -->
-  <section id="families">
-    <div class="section-header">
-      <span class="section-num">05</span>
-      <h2>Google Play Families Policy Compliance</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="content-card">
-      <p>
-        LinkIT360 is fully committed to complying with the <strong>Google Play Families Policy</strong>. As a game accessible to children under 13, we adhere to the following requirements:
-      </p>
-
-      <div class="highlight blue">
-        <span class="highlight-icon">🛡️</span>
-        <span>Lunar Path participates in the Google Play Families program and meets all associated content, advertising, and data handling requirements applicable to apps designed for children.</span>
-      </div>
-
-      <p>Our Play Families Policy commitments include:</p>
-      <ul>
-        <li><strong>Content appropriateness:</strong> All in-game content is appropriate for users of all ages. No violence, adult themes, or inappropriate language is present in the Game.</li>
-        <li><strong>Child-directed advertising:</strong> Ads are served in child-directed mode with all personalization and behavioral targeting features disabled. Only ad networks and formats compliant with the Families Policy are used.</li>
-        <li><strong>No data collection:</strong> We do not collect personal data from any user, fully satisfying the Families Policy data restrictions.</li>
-        <li><strong>No deceptive design:</strong> The Game does not employ deceptive user interfaces, dark patterns, or manipulative design that could take advantage of younger users.</li>
-        <li><strong>No social networking:</strong> The Game contains no chat features, user profiles, or social interactions that could expose children to contact with strangers.</li>
-        <li><strong>No in-app purchases:</strong> The Game requires no payment and contains no virtual currency purchases, loot boxes, or similar monetization features.</li>
-        <li><strong>Parental gates:</strong> Any links to external content (such as our developer contact or app store rating prompts) are placed behind appropriate parental acknowledgment mechanisms where required.</li>
-      </ul>
-
-      <p>
-        We commit to maintaining these standards through all future updates to Lunar Path and will update this Privacy Policy to reflect any material changes.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── SECTION 6: TRACKING TECHNOLOGIES ── -->
-  <section id="tracking">
-    <div class="section-header">
-      <span class="section-num">06</span>
-      <h2>Tracking Technologies</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="content-card">
-      <div class="highlight green">
-        <span class="highlight-icon">🚫</span>
-        <span><strong>No tracking technologies are used by LinkIT360</strong> in the development or operation of Lunar Path.</span>
-      </div>
-      <p>
-        The following tracking and data collection technologies are <strong>not used</strong> in this Game by us:
-      </p>
-      <ul>
-        <li>Cookies or similar web tracking mechanisms</li>
-        <li>Google Maps API or any location services API</li>
-        <li>Analytics SDKs (Firebase Analytics, Mixpanel, Amplitude, etc.)</li>
-        <li>Session recording or heatmap tools</li>
-        <li>Crash reporting tools that transmit data to us</li>
-        <li>Attribution SDKs (Adjust, AppsFlyer, Kochava, etc.)</li>
-        <li>Social login SDKs (Facebook SDK, Google Sign-In, etc.)</li>
-        <li>Cross-app tracking identifiers</li>
-      </ul>
-      <p>
-        The only third-party SDK present in the Game is the advertising SDK described in Section 3, which operates independently under its own privacy policy and is configured in child-directed/non-personalized mode.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── SECTION 7: THIRD-PARTY SERVICES ── -->
-  <section id="third-party">
-    <div class="section-header">
-      <span class="section-num">07</span>
-      <h2>Third-Party Services</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="content-card">
-      <p>
-        Lunar Path is distributed through the <strong>Google Play Store</strong>. As a platform provider, Google may collect certain information in accordance with its own privacy policies when you download, install, or run the Game. This is outside of our control. We encourage you to review Google's Privacy Policy at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: var(--cyan-trail);">policies.google.com/privacy</a>.
-      </p>
-      <p>
-        The following table summarizes all third-party services and their data handling status as they relate to Lunar Path:
-      </p>
-      <table class="rights-table">
-        <thead>
-          <tr>
-            <th>Service</th>
-            <th>Purpose</th>
-            <th>Data Collection</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>[AD NETWORK]</strong></td>
-            <td>In-game advertising</td>
-            <td>Limited technical data (see §3)</td>
-            <td><span class="badge-tag">Child-directed mode</span></td>
-          </tr>
-          <tr>
-            <td><strong>Google Play</strong></td>
-            <td>App distribution platform</td>
-            <td>Per Google's own policy</td>
-            <td><span class="badge-tag green">External</span></td>
-          </tr>
-        </tbody>
-      </table>
-      <p style="margin-top:14px;">
-        We are not responsible for the privacy practices of third-party services. We recommend reviewing each third party's privacy policy for full details.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── SECTION 8: GDPR ── -->
-  <section id="gdpr">
-    <div class="section-header">
-      <span class="section-num">08</span>
-      <h2>GDPR &amp; Your Rights</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="content-card">
-      <p>
-        If you are a resident of the European Economic Area (EEA), the United Kingdom, or Switzerland, you are protected by the <strong>General Data Protection Regulation (GDPR)</strong> and applicable local data protection laws. Lunar Path is designed to be GDPR-compliant.
-      </p>
-      <p>
-        Because Lunar Path does not collect any personal data from users, <strong>no personal data is processed by LinkIT360</strong>, and there is no data to access, rectify, erase, or port. However, we recognize the following GDPR rights and commit to respecting them fully:
-      </p>
-
-      <table class="rights-table">
-        <thead>
-          <tr>
-            <th>Your Right</th>
-            <th>What It Means</th>
-            <th>Applicable to Lunar Path</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Right of Access</strong></td>
-            <td>Request a copy of personal data we hold about you</td>
-            <td><span class="badge-tag green">No data held</span></td>
-          </tr>
-          <tr>
-            <td><strong>Right to Rectification</strong></td>
-            <td>Correct inaccurate personal data</td>
-            <td><span class="badge-tag green">No data held</span></td>
-          </tr>
-          <tr>
-            <td><strong>Right to Erasure</strong></td>
-            <td>Request deletion of your personal data</td>
-            <td><span class="badge-tag green">No data held</span></td>
-          </tr>
-          <tr>
-            <td><strong>Right to Restrict Processing</strong></td>
-            <td>Limit how your data is processed</td>
-            <td><span class="badge-tag green">No processing occurs</span></td>
-          </tr>
-          <tr>
-            <td><strong>Right to Data Portability</strong></td>
-            <td>Receive your data in a portable format</td>
-            <td><span class="badge-tag green">No data held</span></td>
-          </tr>
-          <tr>
-            <td><strong>Right to Object</strong></td>
-            <td>Object to certain types of data processing</td>
-            <td><span class="badge-tag green">No processing occurs</span></td>
-          </tr>
-          <tr>
-            <td><strong>Right re: Automated Decisions</strong></td>
-            <td>Not be subject to automated profiling decisions</td>
-            <td><span class="badge-tag green">No profiling occurs</span></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>
-        If you believe your rights have been violated or have questions about GDPR compliance as it relates to Lunar Path, please contact us at <strong>jawarajoystudio@gmail.com</strong>. You also have the right to lodge a complaint with your local data protection supervisory authority.
-      </p>
-
-      <p>
-        <strong>Legal Basis for Processing:</strong> As LinkIT360 does not process personal data from users, no legal basis under Article 6 of the GDPR is required. The only data processing that may occur is conducted by our third-party ad partner under its own legal basis as disclosed in its privacy policy.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── SECTION 9: DPO ── -->
-  <section id="dpo">
-    <div class="section-header">
-      <span class="section-num">09</span>
-      <h2>Data Protection Officer (DPO)</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="content-card">
-      <p>
-        In accordance with the General Data Protection Regulation (GDPR) and Indonesia's <strong>Personal Data Protection Law (UU PDP No. 27 Tahun 2022)</strong>, LinkIT360 is committed to responsible personal data governance.
-      </p>
-      <p>
-        Given that Lunar Path does not collect or process personal data from its users, a formal DPO appointment may not be legally mandated in all jurisdictions. Nevertheless, LinkIT360 designates a <strong>Privacy Contact</strong> to handle all data protection inquiries, concerns, and regulatory correspondence:
-      </p>
-      <div class="contact-card" style="margin-top:16px;">
-        <div class="contact-row">
-          <span class="contact-label">Role</span>
-          <span class="contact-value">Privacy Contact / Data Protection Representative</span>
+<div class="container">
+    <header>
+        <div class="game-title">
+            <span class="rocket-icon">🚀</span>
+            <h1>Lunar Path</h1>
         </div>
-        <div class="contact-row">
-          <span class="contact-label">Organization</span>
-          <span class="contact-value">LinkIT360</span>
+        <p class="subtitle">Privacy Policy</p>
+        <span class="date-badge">Last Updated: May 2026</span>
+    </header>
+
+    <nav>
+        <div class="nav-title">Quick Navigation</div>
+        <div class="nav-grid">
+            <a href="#intro" class="nav-item">Introduction</a>
+            <a href="#collect" class="nav-item">What We Collect</a>
+            <a href="#data" class="nav-item">How We Use Data</a>
+            <a href="#security" class="nav-item">Security</a>
+            <a href="#children" class="nav-item">Children's Privacy</a>
+            <a href="#rights" class="nav-item">Your Rights</a>
+            <a href="#gdpr" class="nav-item">Legal Info</a>
+            <a href="#contact" class="nav-item">Contact Us</a>
         </div>
-        <div class="contact-row">
-          <span class="contact-label">Location</span>
-          <span class="contact-value">Indonesia</span>
+    </nav>
+
+    <main>
+        <div class="content-wrapper">
+
+            <!-- Section 1: Introduction -->
+            <section id="intro" class="section">
+                <h2>Introduction</h2>
+                <p>Welcome to <strong>Lunar Path</strong> – an exciting space adventure game! We're committed to protecting your privacy while you enjoy your cosmic journey.</p>
+                <p>This Privacy Policy explains how we handle information when you play our game on Google Play Store. We believe in transparency and keeping things simple.</p>
+                <div class="highlight-box">
+                    <strong>🔒 Our Commitment:</strong> We don't collect personal information like your name, email, or location. Your privacy is our priority.
+                </div>
+            </section>
+
+            <!-- Section 2: What We Don't Collect -->
+            <section id="collect" class="section">
+                <h2>What We Do NOT Collect</h2>
+                <p>Lunar Path is designed with privacy in mind. Here's what we <strong>never</strong> collect:</p>
+                <ul>
+                    <li>Your name, email address, or phone number</li>
+                    <li>Your precise location data</li>
+                    <li>Your device contacts or calendar information</li>
+                    <li>Your files, photos, or media</li>
+                    <li>Your account credentials or authentication data</li>
+                    <li>Any gameplay data that identifies you personally</li>
+                    <li>Biometric information</li>
+                </ul>
+            </section>
+
+            <!-- Section 3: What We Automatically Receive -->
+            <section id="data" class="section">
+                <h2>Information We May Automatically Receive</h2>
+                
+                <h3>🎯 Advertising ID</h3>
+                <p>To show you relevant ads, we use your device's <strong>Advertising ID</strong> – a unique, non-personal identifier that doesn't reveal who you are.</p>
+                <ul>
+                    <li>Display personalized advertisements</li>
+                    <li>Measure ad performance and effectiveness</li>
+                    <li>Prevent fraud and duplicate ads</li>
+                    <li>Comply with advertising standards</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <strong>💡 You're in Control:</strong> Want to opt out of personalized ads?
+                    <ol>
+                        <li>Open <code>Settings > Google > Manage Your Google Account</code></li>
+                        <li>Go to <code>Data & Privacy</code></li>
+                        <li>Select <code>Opt out of Ads Personalization</code></li>
+                    </ol>
+                </div>
+
+                <h3>🔗 Third-Party Ad Networks</h3>
+                <p>We partner with ad networks to display ads. They may collect:</p>
+                <ul>
+                    <li>Device model and OS version</li>
+                    <li>Ad interaction data (views and clicks)</li>
+                    <li>General region/country location (not precise)</li>
+                    <li>Aggregated usage statistics</li>
+                </ul>
+                <p>Learn more about how <a href="https://policies.google.com/privacy" target="_blank">Google handles your data</a>.</p>
+
+                <h3>📊 Device Information</h3>
+                <p>We collect basic technical data to keep Lunar Path running smoothly:</p>
+                <ul>
+                    <li>Your device model and brand</li>
+                    <li>Android operating system version</li>
+                    <li>Game version you're using</li>
+                    <li>Crash reports and error logs</li>
+                    <li>Gameplay duration and session frequency (anonymized)</li>
+                </ul>
+            </section>
+
+            <!-- Section 4: How We Use Information -->
+            <section id="security" class="section">
+                <h2>How We Use Information</h2>
+                
+                <h3>✨ Better Advertising</h3>
+                <p>We use your Advertising ID to show you ads you might enjoy, not random content. We also prevent ad fraud and improve our campaigns.</p>
+
+                <h3>🎮 Improving the Game</h3>
+                <p>Your technical data helps us:</p>
+                <ul>
+                    <li>Fix bugs and crashes</li>
+                    <li>Optimize performance on different devices</li>
+                    <li>Understand how players use the game (in aggregate)</li>
+                    <li>Make Lunar Path better with each update</li>
+                </ul>
+
+                <h3>⚖️ Legal Compliance</h3>
+                <p>We follow laws, enforce our terms, and protect everyone from fraud and abuse.</p>
+            </section>
+
+            <!-- Section 5: Data Security -->
+            <section class="section">
+                <h2>Data Security</h2>
+                <p>We use industry-standard security measures to protect the technical data we receive. While no internet transmission is 100% secure, we do our best to safeguard your information.</p>
+                <div class="highlight-box important">
+                    <strong>⚠️ Important:</strong> Since we don't collect personal data, there's very little sensitive information at risk.
+                </div>
+            </section>
+
+            <!-- Section 6: Children's Privacy -->
+            <section id="children" class="section">
+                <h2>Children's Privacy</h2>
+                <p>Lunar Path is designed for everyone, including kids. We comply with <strong>COPPA</strong> (Children's Online Privacy Protection Act) and Google Play's <strong>Families Policy</strong>.</p>
+                <ul>
+                    <li>✓ We don't knowingly collect personal info from kids under 13</li>
+                    <li>✓ No account registration required to play</li>
+                    <li>✓ No personal data requests</li>
+                    <li>✓ Family-friendly ad policies</li>
+                </ul>
+                <p><strong>Parents & Guardians:</strong> You can enable Google Play parental controls and adjust device advertising settings anytime.</p>
+            </section>
+
+            <!-- Section 7: Your Privacy Rights -->
+            <section id="rights" class="section">
+                <h2>Your Privacy Rights</h2>
+
+                <h3>🎯 Control Your Ads</h3>
+                <ul>
+                    <li>Opt out of personalized ads in device settings</li>
+                    <li>Reset your Advertising ID</li>
+                    <li>View and manage your Google Advertising preferences</li>
+                </ul>
+
+                <h3>🔐 App Permissions</h3>
+                <p>You can review and control which permissions Lunar Path has access to in your device settings. We keep our permission requirements minimal.</p>
+
+                <h3>📞 Questions About Privacy?</h3>
+                <p>We're here to help! <a href="mailto:jawarajoystudio@gmail.com">Contact us anytime</a> with questions or concerns.</p>
+            </section>
+
+            <!-- Section 8: Legal Compliance -->
+            <section id="gdpr" class="section">
+                <h2>Legal Compliance</h2>
+
+                <h3>🇪🇺 GDPR (European Users)</h3>
+                <p>If you're in the EU, here's what you need to know:</p>
+                <ul>
+                    <li>We don't collect GDPR-protected personal data</li>
+                    <li>Your Advertising ID may be protected – you can manage it through Google</li>
+                    <li>You can file complaints with your local data protection authority</li>
+                </ul>
+
+                <h3>🇺🇸 CCPA (California Users)</h3>
+                <p>California has strong privacy laws. Here's our compliance:</p>
+                <ul>
+                    <li>We don't "sell" personal information</li>
+                    <li>We don't "share" data for behavioral ads</li>
+                    <li>Your Advertising ID is protected under CPRA</li>
+                    <li><a href="mailto:jawarajoystudio@gmail.com">Contact us</a> to exercise your rights</li>
+                </ul>
+            </section>
+
+            <!-- Section 9: Contact Us -->
+            <section id="contact" class="section">
+                <h2>Get in Touch</h2>
+                <p>Have questions about our privacy practices? We'd love to hear from you!</p>
+                
+                <div class="contact-card">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">Email: <strong><a href="mailto:jawarajoystudio@gmail.com">jawarajoystudio@gmail.com</a></strong></div>
+                    <div class="contact-item">Phone: <strong><a href="tel:+6285710869605">+62 857-1086-9605</a></strong></div>
+                    <p style="margin-top: 20px; font-size: 14px; opacity: 0.95;">We'll respond to your inquiry within 30 days.</p>
+                </div>
+            </section>
+
+            <!-- Section 10: Updates & Final Notes -->
+            <section class="section">
+                <h2>Policy Updates</h2>
+                <p>We may update this Privacy Policy from time to time. We'll let you know about important changes by updating the date at the top of this page.</p>
+                <p><strong>By playing Lunar Path, you agree to this Privacy Policy.</strong> If you don't agree, please don't use the game.</p>
+                <div class="highlight-box">
+                    <strong>📋 Note:</strong> We recommend consulting with a legal professional to ensure full compliance with laws in your jurisdiction.
+                </div>
+            </section>
+
         </div>
-        <div class="contact-row">
-          <span class="contact-label">Email</span>
-          <span class="contact-value"><a href="mailto:jawarajoystudio@gmail.com">jawarajoystudio@gmail.com</a></span>
-        </div>
-      </div>
-      <p style="margin-top:16px;">
-        Any data subject requests, regulatory inquiries, or data protection authority correspondence should be directed to the above contact. We commit to responding to all legitimate inquiries within <strong>30 days</strong> of receipt, in compliance with GDPR Article 12 timeframe requirements.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── SECTION 10: INTERNATIONAL TRANSFERS ── -->
-  <section id="international">
-    <div class="section-header">
-      <span class="section-num">10</span>
-      <h2>International Data Transfers</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="content-card">
-      <p>
-        LinkIT360 is headquartered in <strong>Indonesia</strong>. Lunar Path is distributed globally and may be played by users across jurisdictions with different data protection laws, including the EEA, United Kingdom, United States, and others.
-      </p>
-      <p>
-        Because <strong>LinkIT360 does not collect or transfer any personal data from users</strong>, no international transfer of personal data by LinkIT360 occurs as a result of playing Lunar Path.
-      </p>
-      <p>
-        However, our third-party advertising partner may transfer limited technical data internationally in accordance with its own standard contractual clauses, data processing agreements, or other approved cross-border transfer mechanisms under GDPR Chapter V. Please review the ad network's privacy policy for details on their international data transfer safeguards.
-      </p>
-      <div class="highlight blue">
-        <span class="highlight-icon">🌏</span>
-        <span>This Privacy Policy applies equally to all users worldwide, regardless of their country of residence. We do not discriminate between users based on nationality or location.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SECTION 11: SECURITY ── -->
-  <section id="security">
-    <div class="section-header">
-      <span class="section-num">11</span>
-      <h2>Data Security</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="content-card">
-      <p>
-        Because Lunar Path does not collect, transmit, or store personal data on our servers, the risk of a data breach involving user personal information from our Game is effectively eliminated at the data collection layer.
-      </p>
-      <p>
-        Game data stored locally on your device (such as progress and scores) is subject to your device's own security mechanisms. We recommend keeping your device's operating system and security software up to date to protect data stored on your device.
-      </p>
-      <p>
-        In the unlikely event that we discover any security vulnerability that could affect user privacy, we commit to investigating and resolving it promptly, and to notifying affected parties and relevant authorities where required by applicable law.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── SECTION 12: CHANGES ── -->
-  <section id="changes">
-    <div class="section-header">
-      <span class="section-num">12</span>
-      <h2>Changes to This Policy</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="content-card">
-      <p>
-        We may update this Privacy Policy from time to time to reflect changes in our practices, the Game's features, applicable law, or regulatory guidance. When we make material changes, we will:
-      </p>
-      <ul>
-        <li>Update the "Last Updated" date at the top of this page</li>
-        <li>Post the revised policy at the same URL used in the Google Play Store listing</li>
-        <li>Where required by applicable law, provide additional notice (such as an in-game notification)</li>
-      </ul>
-      <p>
-        We encourage you to review this Privacy Policy periodically. Your continued use of Lunar Path after changes are posted constitutes your acceptance of the revised Policy.
-      </p>
-      <p>
-        If we introduce any feature that would result in the collection of personal data — which we currently have no plans to do — we will revise this Privacy Policy materially before such a feature is released, and we will comply with all applicable consent and notice requirements.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── SECTION 13: CONTACT ── -->
-  <section id="contact">
-    <div class="section-header">
-      <span class="section-num">13</span>
-      <h2>Contact Us</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="contact-card">
-      <p style="color: rgba(240,246,255,0.75); margin-bottom:18px; font-weight:300;">
-        If you have questions, concerns, or requests relating to this Privacy Policy or your privacy rights, please reach out to us. We aim to respond to all inquiries within <strong>30 calendar days</strong>.
-      </p>
-      <div class="contact-row">
-        <span class="contact-label">Game</span>
-        <span class="contact-value">Lunar Path</span>
-      </div>
-      <div class="contact-row">
-        <span class="contact-label">Developer</span>
-        <span class="contact-value">LinkIT360</span>
-      </div>
-      <div class="contact-row">
-        <span class="contact-label">Location</span>
-        <span class="contact-value">Indonesia</span>
-      </div>
-      <div class="contact-row">
-        <span class="contact-label">Email</span>
-        <span class="contact-value"><a href="mailto:jawarajoystudio@gmail.com">jawarajoystudio@gmail.com</a></span>
-      </div>
-      <div class="contact-row">
-        <span class="contact-label">Subject</span>
-        <span class="contact-value" style="color: var(--muted); font-style:italic;">Use subject: "Lunar Path Privacy Policy"</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ── -->
-  <footer>
-    <div class="footer-brand"><span>LinkIT360</span> · Lunar Path</div>
-    <div class="footer-note">© 2025 LinkIT360. All rights reserved.</div>
-    <div class="footer-note">This policy is effective globally.</div>
-  </footer>
+    </main>
 
 </div>
+
+<!-- Scroll to top button -->
+<div class="scroll-indicator" id="scrollBtn">↑</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-rocket">🚀</div>
+        <p><strong>Lunar Path Privacy Policy</strong></p>
+        <p>An exciting space adventure game</p>
+        <div class="footer-divider"></div>
+        <p>© 2026 Jawara Joy Studio. All rights reserved.</p>
+        <p style="margin-top: 15px; font-size: 12px; opacity: 0.7;">This privacy policy is designed for transparency. For legal matters, consult with a qualified attorney.</p>
+    </div>
+</footer>
+
+<script>
+    // Smooth scrolling for nav items
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && document.querySelector(href)) {
+                e.preventDefault();
+                document.querySelector(href).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Highlight active nav item
+                document.querySelectorAll('.nav-item').forEach(a => {
+                    a.style.background = 'rgba(139, 92, 246, 0.15)';
+                });
+                this.style.background = 'rgba(236, 72, 153, 0.3)';
+            }
+        });
+    });
+
+    // Scroll to top button
+    const scrollBtn = document.getElementById('scrollBtn');
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollBtn.classList.add('visible');
+        } else {
+            scrollBtn.classList.remove('visible');
+        }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Intersection Observer for animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'slideUp 0.6s ease-out forwards';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.opacity = '0';
+        observer.observe(section);
+    });
+</script>
+
 </body>
 </html>
